@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.13.13 on linux)" generated="2026-06-04T22:54:20.693436" rpa="false" schemaversion="5">
+<suite id="s1" name="Contact Us" source="/home/alexdev/Documentos/qaeje/Practica3Robot/test/contact_us.robot">
+<kw name="Abrir Sitio" owner="keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-06-04T22:54:20.872634" level="INFO">Opening browser 'Chrome' to base url 'https://automationexercise.com'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-06-04T22:54:20.872321" elapsed="3.316170"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-06-04T22:54:24.188716" elapsed="0.024102"/>
+</kw>
+<status status="PASS" start="2026-06-04T22:54:20.871650" elapsed="3.341335"/>
+</kw>
+<test id="s1-t1" name="Formulario Contact Us" line="14">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-06-04T22:54:24.214088" level="INFO">Clicking element 'xpath=//a[contains(text(),'Contact us')]'.</msg>
+<arg>xpath=//a[contains(text(),'Contact us')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-04T22:54:24.213590" elapsed="0.763014"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-04T22:54:24.977197" level="INFO">Typing text 'Alex' into text field 'xpath=//input[@data-qa='name']'.</msg>
+<arg>xpath=//input[@data-qa='name']</arg>
+<arg>${NOMBRE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-04T22:54:24.976874" elapsed="0.179017"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-04T22:54:25.156564" level="INFO">Typing text 'alex@test.com' into text field 'xpath=//input[@data-qa='email']'.</msg>
+<arg>xpath=//input[@data-qa='email']</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-04T22:54:25.156175" elapsed="0.086333"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-04T22:54:25.243178" level="INFO">Typing text 'Prueba Robot Framework' into text field 'xpath=//input[@data-qa='subject']'.</msg>
+<arg>xpath=//input[@data-qa='subject']</arg>
+<arg>${ASUNTO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-04T22:54:25.242813" elapsed="0.094379"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-04T22:54:25.337846" level="INFO">Typing text 'Mensaje enviado desde Robot Framework' into text field 'xpath=//textarea[@data-qa='message']'.</msg>
+<arg>xpath=//textarea[@data-qa='message']</arg>
+<arg>${MENSAJE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-04T22:54:25.337468" elapsed="0.080970"/>
+</kw>
+<kw name="Choose File" owner="SeleniumLibrary">
+<msg time="2026-06-04T22:54:25.418999" level="INFO">Sending /home/alexdev/Documentos/qaeje/Practica3Robot/archivos/prueba.txt to browser.</msg>
+<arg>xpath=//input[@type='file']</arg>
+<arg>/home/alexdev/Documentos/qaeje/Practica3Robot/archivos/prueba.txt</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<status status="PASS" start="2026-06-04T22:54:25.418718" elapsed="0.047857"/>
+</kw>
+<kw name="Captura Evidencia" owner="keywords">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-06-04T22:54:25.584916" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="evidencias/formulario_completo.png"&gt;&lt;img src="evidencias/formulario_completo.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>evidencias/${nombre}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-06-04T22:54:25.467169" elapsed="0.117862"/>
+</kw>
+<arg>formulario_completo</arg>
+<status status="PASS" start="2026-06-04T22:54:25.466885" elapsed="0.118243"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-06-04T22:54:25.585579" level="INFO">Clicking button 'xpath=//input[@data-qa='submit-button']'.</msg>
+<arg>xpath=//input[@data-qa='submit-button']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-04T22:54:25.585317" elapsed="0.060019"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2026-06-04T22:54:25.645810" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>ACCEPT</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2026-06-04T22:54:25.645621" elapsed="0.010440"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-06-04T22:54:25.670831" level="INFO">Current page contains text 'Success! Your details have been submitted successfully.'.</msg>
+<arg>Success! Your details have been submitted successfully.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-06-04T22:54:25.656409" elapsed="0.014540"/>
+</kw>
+<kw name="Captura Evidencia" owner="keywords">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-06-04T22:54:25.772912" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="evidencias/contacto_exitoso.png"&gt;&lt;img src="evidencias/contacto_exitoso.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>evidencias/${nombre}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-06-04T22:54:25.671518" elapsed="0.101502"/>
+</kw>
+<arg>contacto_exitoso</arg>
+<status status="PASS" start="2026-06-04T22:54:25.671220" elapsed="0.101885"/>
+</kw>
+<status status="PASS" start="2026-06-04T22:54:24.213099" elapsed="1.560148"/>
+</test>
+<kw name="Cerrar Navegador" owner="keywords" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-06-04T22:54:25.774189" elapsed="0.065375"/>
+</kw>
+<status status="PASS" start="2026-06-04T22:54:25.773842" elapsed="0.065846"/>
+</kw>
+<status status="PASS" start="2026-06-04T22:54:20.694289" elapsed="5.145442"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Contact Us" id="s1" pass="1" fail="0" skip="0">Contact Us</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

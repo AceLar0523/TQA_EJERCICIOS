@@ -1,0 +1,8 @@
+robot Practica3Robot/test/login_incorrecto.robot
+robot Practica3Robot/test/busqueda_productos.robot
+robot Practica3Robot/test/contact_us.robot
+# o ejecutar todo el directorio
+robot Practica3Robot/test/
+====================
+cd Practica3Robot
+robot test/

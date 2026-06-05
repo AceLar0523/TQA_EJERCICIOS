@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.13.13 on linux)" generated="2026-06-04T22:47:36.182078" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Incorrecto" source="/home/alexdev/Documentos/qaeje/Practica3Robot/test/login_incorrecto.robot">
+<kw name="Abrir Sitio" owner="keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-06-04T22:47:36.387752" level="INFO">Opening browser 'Chrome' to base url 'https://automationexercise.com'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-06-04T22:47:36.387488" elapsed="4.978838"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-06-04T22:47:41.366578" elapsed="0.020898"/>
+</kw>
+<status status="PASS" start="2026-06-04T22:47:36.386776" elapsed="5.000951"/>
+</kw>
+<test id="s1-t1" name="Login Incorrecto" line="12">
+<kw name="Ir A Login" owner="keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-06-04T22:47:41.389559" level="INFO">Clicking element 'xpath=//a[contains(text(),'Signup / Login')]'.</msg>
+<arg>xpath=//a[contains(text(),'Signup / Login')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-04T22:47:41.389036" elapsed="0.735220"/>
+</kw>
+<status status="PASS" start="2026-06-04T22:47:41.388696" elapsed="0.735688"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-04T22:47:42.124870" level="INFO">Typing text 'falso@test.com' into text field 'xpath=//input[@data-qa='login-email']'.</msg>
+<arg>xpath=//input[@data-qa='login-email']</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-04T22:47:42.124573" elapsed="0.100374"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2026-06-04T22:47:42.225594" level="INFO">Typing password into text field 'xpath=//input[@data-qa='login-password']'.</msg>
+<msg time="2026-06-04T22:47:42.293336" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>xpath=//input[@data-qa='login-password']</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-04T22:47:42.225193" elapsed="0.098824"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-06-04T22:47:42.324513" level="INFO">Clicking button 'xpath=//button[@data-qa='login-button']'.</msg>
+<arg>xpath=//button[@data-qa='login-button']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-04T22:47:42.324256" elapsed="0.063852"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-06-04T22:47:43.032323" level="INFO">Current page contains text 'Your email or password is incorrect!'.</msg>
+<arg>Your email or password is incorrect!</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-06-04T22:47:42.388349" elapsed="0.644093"/>
+</kw>
+<kw name="Captura Evidencia" owner="keywords">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-06-04T22:47:43.143070" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="evidencias/login_incorrecto.png"&gt;&lt;img src="evidencias/login_incorrecto.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>evidencias/${nombre}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-06-04T22:47:43.033002" elapsed="0.110186"/>
+</kw>
+<arg>login_incorrecto</arg>
+<status status="PASS" start="2026-06-04T22:47:43.032724" elapsed="0.110554"/>
+</kw>
+<status status="PASS" start="2026-06-04T22:47:41.387868" elapsed="1.755563"/>
+</test>
+<kw name="Cerrar Navegador" owner="keywords" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-06-04T22:47:43.144160" elapsed="0.063169"/>
+</kw>
+<status status="PASS" start="2026-06-04T22:47:43.143960" elapsed="0.063509"/>
+</kw>
+<status status="PASS" start="2026-06-04T22:47:36.182880" elapsed="7.024644"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Login Incorrecto" id="s1" pass="1" fail="0" skip="0">Login Incorrecto</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.13.13 on linux)" generated="2026-06-04T22:49:18.793988" rpa="false" schemaversion="5">
+<suite id="s1" name="Busqueda Productos" source="/home/alexdev/Documentos/qaeje/Practica3Robot/test/busqueda_productos.robot">
+<kw name="Abrir Sitio" owner="keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-06-04T22:49:18.982556" level="INFO">Opening browser 'Chrome' to base url 'https://automationexercise.com'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-06-04T22:49:18.982326" elapsed="2.731282"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-06-04T22:49:21.713827" elapsed="0.032983"/>
+</kw>
+<status status="PASS" start="2026-06-04T22:49:18.981653" elapsed="2.765340"/>
+</kw>
+<test id="s1-t1" name="Busqueda De Productos" line="11">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-06-04T22:49:21.748159" level="INFO">Clicking element 'xpath=//a[contains(text(),'Products')]'.</msg>
+<arg>xpath=//a[contains(text(),'Products')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-04T22:49:21.747612" elapsed="1.419613"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=search_product</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-04T22:49:23.167521" elapsed="0.015743"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-04T22:49:23.183956" level="INFO">Typing text 'Blue Top' into text field 'id=search_product'.</msg>
+<arg>id=search_product</arg>
+<arg>${PRODUCTO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-04T22:49:23.183581" elapsed="0.089743"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-06-04T22:49:23.273949" level="INFO">Clicking element 'id=submit_search'.</msg>
+<arg>id=submit_search</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-04T22:49:23.273641" elapsed="0.976376"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-06-04T22:49:24.266321" level="INFO">Current page contains text 'Searched Products'.</msg>
+<arg>Searched Products</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-06-04T22:49:24.250264" elapsed="0.016196"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-06-04T22:49:24.276422" level="INFO">Current page contains text 'Blue Top'.</msg>
+<arg>${PRODUCTO}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-06-04T22:49:24.266726" elapsed="0.009821"/>
+</kw>
+<kw name="Captura Evidencia" owner="keywords">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-06-04T22:49:24.421213" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="evidencias/busqueda_producto.png"&gt;&lt;img src="evidencias/busqueda_producto.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>evidencias/${nombre}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-06-04T22:49:24.277122" elapsed="0.144240"/>
+</kw>
+<arg>busqueda_producto</arg>
+<status status="PASS" start="2026-06-04T22:49:24.276844" elapsed="0.144662"/>
+</kw>
+<status status="PASS" start="2026-06-04T22:49:21.747110" elapsed="2.674610"/>
+</test>
+<kw name="Cerrar Navegador" owner="keywords" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-06-04T22:49:24.422622" elapsed="0.065844"/>
+</kw>
+<status status="PASS" start="2026-06-04T22:49:24.422384" elapsed="0.066235"/>
+</kw>
+<status status="PASS" start="2026-06-04T22:49:18.794736" elapsed="5.693937"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Busqueda Productos" id="s1" pass="1" fail="0" skip="0">Busqueda Productos</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
